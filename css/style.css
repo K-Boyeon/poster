@@ -1,0 +1,157 @@
+/* COMMON */
+*{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+img{
+    display: block;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Noto Sans KR', 'Open Sans', sans-serif ;
+}
+
+
+/* INTRO */
+.intro{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.intro .img {
+    width: 100%;
+    background: url("../images/해리포터_포스터디자인_bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.intro .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 1s;
+}
+.intro .title.on{
+    opacity: 1;
+}
+.intro h2{
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    font-size: 50px;
+    color: chartreuse;
+}
+
+
+/* CONTENT */
+.content{
+    position: relative;
+}
+.content .image{
+    position: relative;
+    width: 50%;
+}
+.content .image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 3s;
+}
+.content .image.active img{
+    opacity: 1;
+}
+.content .text-group{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+}
+.content .text-group .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 50%;
+}
+.content .text-group .text h1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 15%;
+}
+.content .text-group .has-ani span{
+    opacity: 0;
+}
+.has-ani.animate-in span{
+    animation: textHidden 0.1s 1.1s forwards;
+}
+.has-ani.animate-in:before, 
+.has-ani.animate-in:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 10;
+}
+.has-ani.animate-in:before {
+    background-color: #001d3d;
+}
+.has-ani.animate-in:after {
+    background-color: #ffc300;
+    animation-delay: .5s;
+}
+.has-ani.ani-ltr.animate-in:before {
+    animation: revealLTR 1.8s ease;
+}
+.has-ani.ani-ltr.animate-in:after {
+    animation: revealLTR 1s .6s ease;
+}
+    @keyframes revealLTR {
+        0%   {width: 0; left: 0;}
+        65%  {width: 100%; left: 0;}
+        100% {width: 0; left: 100%;}
+    }
+    @keyframes textHidden {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+.content .text-group .text h2{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+}
+.content .text-group .text .note{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 20%;
+}
+
+/* FOOTER */
+.footer{
+    height: 100px;
+    background: #000;
+}
+.footer p{
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

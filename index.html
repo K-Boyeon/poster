@@ -5,38 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/poster.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1jquery-ui.min.js"></script> -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script defer src="./js/main.js"></script>
+
 </head>
 <body>
     <!-- INTRO -->
-    <div class="intro">
+    <div class="intro" id="page1">
 
-        <div class="img">
-            <h1>Harry Potter</h1>
-            <h2>poster desing</h2>
+        <div class="img"></div>
+
+        <div class="title">
+            <img src="./images/title.png" alt="title" class="has-ani ani-ltr">
+            <h2>poster design</h2>
         </div>
         
     </div>
 
 
     <!-- CONTENT -->
-    <div class="content">
+    <div class="content" id="page2">
 
         <div class="image">
-            <img src="./images/mockup.png" alt="mockup">
+            <img src="./images/mockup3.png" alt="mockup">
         </div>
         
-        <div class="text">
-            <p>설명</p>
+        <div class="text-group">
+            <div class="text">
+                <h1 class="has-ani ani-ltr">
+                    <span>Harry Potter</span>
+                </h1>
+            <div class="text">
+                <h2 class="has-ani ani-ltr">
+                    <span>Poster Design</span>
+                </h2>
+            </div>
+            
+            <div class="note">
+                <p>기간 : 2주</p>
+                <p>Liquify기능으로 이미지를 늘려준 다음 깨진 유리 모양의 브러쉬로 지워주며 깨진 느낌을 주었습니다.</p>
+                <p>Lens Flare기능으로 빛 효과를 주었고, layer를 추가하여 호그와트 고유의 색을 주었습니다.</p>
+                <p>배경은 황갈색과 남색을 섞어 좀 더 어두운 느낌을 주었습니다. </p>
+            </div>
+            </div>
         </div>
-
 
     </div>
 
+    <!-- FOOTER -->
     <div class="footer">
 
         <p>Thank you for coming.</p>
 
     </div>
+
 </body>
 </html>

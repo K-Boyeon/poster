@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Poster Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1jquery-ui.min.js"></script> -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
 
     <script defer src="./js/main.js"></script>
 
 </head>
 <body>
     <!-- INTRO -->
-    <div class="intro" id="page1">
+    <div class="section intro" id="page1">
 
         <div class="img"></div>
 
         <div class="title">
-            <img src="./images/title.png" alt="title" class="has-ani ani-ltr">
+            <img src="./images/title.png" alt="title">
             <h2>poster design</h2>
         </div>
         
@@ -32,7 +35,7 @@
 
 
     <!-- CONTENT -->
-    <div class="content" id="page2">
+    <div class="section content" id="page2">
 
         <div class="image">
             <img src="./images/mockup3.png" alt="mockup">
@@ -40,20 +43,24 @@
         
         <div class="text-group">
             <div class="text">
-                <h1 class="has-ani ani-ltr">
-                    <span>Harry Potter</span>
+                <h1 class="revealer">
+                    <div class="revealer_content">Harry Potter</div>
+                    <div class="revealer_element"></div>
                 </h1>
             <div class="text">
-                <h2 class="has-ani ani-ltr">
-                    <span>Poster Design</span>
+                <h2 class="revealer delay1">
+                    <div class="revealer_content">Poster Design</div>
+                    <div class="revealer_element"></div>
                 </h2>
             </div>
             
             <div class="note">
                 <p>기간 : 2주</p>
-                <p>Liquify기능으로 이미지를 늘려준 다음 깨진 유리 모양의 브러쉬로 지워주며 깨진 느낌을 주었습니다.</p>
-                <p>Lens Flare기능으로 빛 효과를 주었고, layer를 추가하여 호그와트 고유의 색을 주었습니다.</p>
-                <p>배경은 황갈색과 남색을 섞어 좀 더 어두운 느낌을 주었습니다. </p>
+                <p>가장 메인에 해당하는 해리포터는 Liquify기능으로 이미지를 늘려준다음, brush settings를 활용해 angle 과 size 를 랜덤으로 설정하여 깨진 유리 모양의 brush로 지워주었습니다.<br>
+                layer를 추가하여 brush로 호그와트 고유의 색의 느낌을 주었습니다.<br>
+                가장 가운데 마법 지팡이와 배경 주변에는 Lens Flare기능으로 빛 효과를 주어 더욱 화사한 느낌을 주었으며,<br>
+                배경은 스모그와 비슷한 구름의 이미지를 찾아 cuvers로 명암을 주었고, Hue/Saturtion를 사용해 색 보정을 하였습니다.<br>
+                끝으로 황갈색과 남색을 섞어 좀 더 어두운 느낌을 주었습니다. </p>
             </div>
             </div>
         </div>
@@ -63,7 +70,12 @@
     <!-- FOOTER -->
     <div class="footer">
 
-        <p>Thank you for coming.</p>
+        <div class="footer_text">
+            <p>Thank you for visiting.</p>
+            <p>
+                &copy;<span class="this-year"></span> BY.K, All Rights Reserved.
+            </p>
+        </div>
 
     </div>
 

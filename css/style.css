@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'HARRYP__'; /* 글꼴 */
+    src: local('HARRYP__'),
+        url('../HARRYP__.TTF'),
+        url('HARRYP__.eot'),
+        url('HARRYP__.woff') format('woff'),
+        url('HARRYP__.ttf') format('truetype');
+}
+
+
 /* COMMON */
 *{
     margin: 0;
@@ -14,7 +24,9 @@ a{
 body{
     font-family: 'Noto Sans KR', 'Open Sans', sans-serif ;
 }
-
+.section{
+    overflow: hidden;
+}
 
 /* INTRO */
 .intro{
@@ -30,128 +42,240 @@ body{
     background-position: center;
     background-size: cover;
 }
-.intro .title{
+.intro .title img{
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    opacity: 0;
+    -webkit-transition: all 1s;
     transition: all 1s;
+    opacity: 0;
 }
-.intro .title.on{
+.intro .title.on img{
     opacity: 1;
 }
-.intro h2{
+.intro .title h2{
     position: absolute;
-    top: 60%;
-    right: 10%;
+    top: 65%;
+    right: 17%;
     font-size: 50px;
-    color: chartreuse;
+    font-family: 'HARRYP__', sans-serif;
+    letter-spacing: 10px;
+    color: #eb9f12;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+.intro .title.on h2{
+    opacity: 1;
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
 }
 
 
 /* CONTENT */
-.content{
+#page2{
     position: relative;
 }
-.content .image{
-    position: relative;
+#page2 .image{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 50%;
 }
-.content .image img{
+#page2 .image img{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) translateX(-300px);
+    transform: translate(-50%, -50%) translateX(-300px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
     opacity: 0;
-    transition: all 3s;
 }
-.content .image.active img{
+#page2 .image.active img{
     opacity: 1;
+    -webkit-transform: translate(-50%, -50%) translateX(0);
+    transform: translate(-50%, -50%) translateX(0);
 }
-.content .text-group{
+#page2 .text-group{
     position: absolute;
     top: 0;
     right: 0;
     width: 50%;
+    font-family: 'Sunflower', sans-serif;
 }
-.content .text-group .text{
+#page2 .text-group .text{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 50%;
 }
-.content .text-group .text h1{
+
+/* #page2 .text-group .text h1 div,
+#page2 .text-group .text h2 div{
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 20%;
+    background: #eb9f12;
+    z-index: -1;
+}
+#page2 .text-group .text h1 div{
+    left: -8%;
+}
+#page2 .text-group .text h2 div{
+    left: 60%;
+} */
+/* #page2 .text-group .text h1{
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) translateX(300px);
+    transform: translate(-50%, -50%) translateX(300px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    transition-delay: .3s;
+    opacity: 0;
     height: 15%;
+    font-family: 'PT Serif', serif;
+} */
+/* #page2 .text-group .text.active h1{
+    -webkit-transform: translate(-50%, -50%) translateX(0);
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+} */
+/* #page2 .text-group .text h2{
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) translateX(300px);
+    transform: translate(-50%, -50%) translateX(300px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    transition-delay: .5s;
+    opacity: 0;
+    height: 20%;
+    font-family: 'PT Serif', serif;
+} */
+#page2 .revealer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    /* transition-delay: .5s; */
+    /* opacity: 0; */
+    height: 20%;
+    font-family: 'PT Serif', serif;
+    flex: none; 
+    z-index: 2; 
+    display: inline-block; 
+    white-space: nowrap;
 }
-.content .text-group .has-ani span{
+#page2 .text-group .text h2{
+    top: -15%;
+    left: 55%;
+}
+/* #page2 .text-group .text.active h2{
+    -webkit-transform: translate(-50%, -50%) translateX(0);
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+} */
+#page2 .text-group .text .note{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) translateX(300px);
+    transform: translate(-50%, -50%) translateX(300px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    transition-delay: .7s;
+    opacity: 0;
+    width: 80%;
+    height: 15%;
+    font-weight: 300;
+    line-height: 30px;
+}
+#page2 .text-group .text.active .note{
+    -webkit-transform: translate(-50%, -50%) translateX(0);
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+}
+
+#page2 .text-group .revealer_content {
     opacity: 0;
 }
-.has-ani.animate-in span{
-    animation: textHidden 0.1s 1.1s forwards;
+#page2 .text-group .revealer_element {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    transform: scaleX(0); 
+    width: 100%; 
+    height: 100%; 
+    background: #040c3c; 
+    pointer-events: none;
 }
-.has-ani.animate-in:before, 
-.has-ani.animate-in:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    z-index: 10;
+
+#page2.show .revealer .revealer_content {
+    animation: opa1 1s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
 }
-.has-ani.animate-in:before {
-    background-color: #001d3d;
+#page2.show .revealer.delay1 .revealer_content {
+    animation: opa1 1s 0.2s cubic-bezier(0.0, 0.0, 2, 1) forwards;
 }
-.has-ani.animate-in:after {
-    background-color: #ffc300;
-    animation-delay: .5s;
+
+#page2.show .revealer .revealer_element {
+    animation: ani1_right 1s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
 }
-.has-ani.ani-ltr.animate-in:before {
-    animation: revealLTR 1.8s ease;
+#page2.show .revealer.delay1 .revealer_element {
+    animation: ani1_right 1s 0.2s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
 }
-.has-ani.ani-ltr.animate-in:after {
-    animation: revealLTR 1s .6s ease;
-}
-    @keyframes revealLTR {
-        0%   {width: 0; left: 0;}
-        65%  {width: 100%; left: 0;}
-        100% {width: 0; left: 100%;}
+
+    @keyframes ani1 {
+        0%   {transform-origin: 0 50%; transform: scaleX(0);}
+        60%  {transform-origin: 0 50%; transform: scaleX(1);}
+        70%  {transform-origin: 100% 50%; transform: scaleX(1);}
+        100% {transform-origin: 100% 50%; transform: scaleX(0);}
     }
-    @keyframes textHidden {
-        0% {opacity: 0;}
+    @keyframes ani1_right {
+        0%   {transform-origin: 100% 50%; transform: scaleX(0);}
+        60%  {transform-origin: 100% 50%; transform: scaleX(1);}
+        70%  {transform-origin: 0% 50%; transform: scaleX(1);}
+        100% {transform-origin: 0% 50%; transform: scaleX(0);}
+    }
+    @keyframes opa1 {
+        0%   {opacity: 0;}
+        50%  {opacity: 0;}
+        51%  {opacity: 1;}
         100% {opacity: 1;}
     }
-.content .text-group .text h2{
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20%;
+
+/* FOOTER */
+.footer{
+    position: relative;
+    height: 15%;
+    background: #777;
 }
-.content .text-group .text .note{
+.footer .footer_text{
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
     height: 20%;
+    font-family: 'PT Serif', serif;
 }
-
-/* FOOTER */
-.footer{
-    height: 100px;
-    background: #000;
-}
-.footer p{
+.footer .footer_text p{
     color: #fff;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 10px;
+}
+.footer .footer_text p:last-child,
+.footer .footer_text p:last-child span{
+    letter-spacing: 2px;
+    font-size: 10px;
 }

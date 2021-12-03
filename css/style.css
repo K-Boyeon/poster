@@ -133,7 +133,7 @@ body{
 }
 #page2 .text-group .text h2{
     top: -24%;
-    left: 55%;
+    left: 57.5%;
 }
 /* #page2 .text-group .text.active h2{
     -webkit-transform: translate(-50%, -50%) translateX(0);
@@ -164,6 +164,14 @@ body{
 #page2 .text-group .revealer_content {
     opacity: 0;
 }
+#page2 .text-group .revealer .revealer_box{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 #page2 .text-group .revealer_element {
     position: absolute; 
     top: -30%; 
@@ -171,9 +179,52 @@ body{
     transform: scaleX(0); 
     width: 120%; 
     height: 100%; 
-    background: #daa52e; 
+    /* background: #daa52e;  */
+    border: 1px solid #777;
     pointer-events: none;
     z-index: -1;
+    transform-style: preserve-3d;
+}
+#page2 .text-group .revealer_element4 {
+    position: absolute; 
+    top: 115%; 
+    left: -10%; 
+    transform: scaleX(0); 
+    perspective: 50px;
+    transform-style: preserve-3d;
+    width: 40px; 
+    height: 40px; 
+    background: #daa52e;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: .4;
+}
+#page2 .text-group .revealer_element6 {
+    position: absolute; 
+    top: -50%; 
+    left: -50%; 
+    transform: scaleX(0); 
+    width: 80px; 
+    height: 80px; 
+    background: #daa52e; 
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: .8;
+}
+#page2 .text-group .revealer_element7 {
+    position: absolute; 
+    top: -135%; 
+    left: 50%; 
+    transform: scaleX(0); 
+    width: 140px; 
+    height: 140px; 
+    background: #daa52e; 
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: .8;
 }
 #page2 .text-group .revealer_element2 {
     position: absolute; 
@@ -198,21 +249,36 @@ body{
 #page2.show .revealer .revealer_element {
     animation: ani1_right 1.5s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
 }
+/* #page2.show .revealer .revealer_element3 {
+    animation: ani1_right 1.5s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+} */
+#page2.show .revealer .revealer_element4 {
+    animation: ani1_right 1.5s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+}
+/* #page2.show .revealer .revealer_element5 {
+    animation: ani1_right 1.5s 0.4s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+} */
+#page2.show .revealer .revealer_element6 {
+    animation: ani1_right 1.5s 0.2s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+}
+#page2.show .revealer .revealer_element7 {
+    animation: ani1_right 1.5s 0.4s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+}
 #page2.show .revealer.delay1 .revealer_element2 {
     animation: ani1 1.5s 0.2s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
 }
 
     @keyframes ani1 {
-        0%   {transform-origin: 0 50%; transform: scaleX(0);}
-        60%  {transform-origin: 0 50%; transform: scaleX(1);}
-        70%  {transform-origin: 100% 50%; transform: scaleX(1);}
-        100% {transform-origin: 100% 50%; transform: scaleX(1);}
+        0%   {transform-origin: 0 50%; transform: scaleY(0);}
+        60%  {transform-origin: 0 50%; transform: scaleY(1);}
+        70%  {transform-origin: 100% 50%; transform: scaleY(1);}
+        100% {transform-origin: 100% 50%; transform: scaleY(1);}
     }
     @keyframes ani1_right {
-        0%   {transform-origin: 100% 50%; transform: scaleX(0);}
-        60%  {transform-origin: 100% 50%; transform: scaleX(1);}
-        70%  {transform-origin: 0% 50%; transform: scaleX(1);}
-        100% {transform-origin: 0% 50%; transform: scaleX(1);}
+        0%   {transform-origin: 100% 50%; transform: scaleY(0);}
+        60%  {transform-origin: 100% 50%; transform: scaleY(1);}
+        70%  {transform-origin: 0% 50%; transform: scaleY(1);}
+        100% {transform-origin: 0% 50%; transform: scaleY(1);}
     }
     @keyframes opa1 {
         0%   {opacity: 0;}

@@ -108,7 +108,7 @@ body{
 }
 #page2 .text-group .text{
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 42%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -126,8 +126,7 @@ body{
     /* opacity: 0; */
     height: 15%;
     font-family: 'PT Serif', serif;
-    flex: none; 
-    z-index: 2; 
+    flex: none;  
     display: inline-block; 
     white-space: nowrap;
 }
@@ -142,7 +141,7 @@ body{
 } */
 #page2 .text-group .text .note{
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%) translateX(300px);
     transform: translate(-50%, -50%) translateX(300px);
